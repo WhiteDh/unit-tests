@@ -15,13 +15,22 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
     @Test
-    void testThatSumWorksCorrect() {
-        int actual = calc.sum(5);
+    void testSumForValue1() {
+        int actual = calc.sum(1);
 
         //Then
-        int expected = 15;
+        int expected = 1;
         Assertions.assertEquals(expected, actual);
     }
+
+     @Test
+     void testSumForValue5() {
+         int actual = calc.sum(5);
+
+         //Then
+         int expected = 15;
+         Assertions.assertEquals(expected, actual);
+     }
 
     @Test
     void sumThrowsExceptionWhenInputIsZero() {
